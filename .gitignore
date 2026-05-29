@@ -108,5 +108,4 @@ temp/
 # Webdev artifacts (checkpoint zips, migrations, etc.)
 .webdev/
 
-# JuventusFC version file (auto-generated, not part of source)
-client/public/__manus__/version.json
+# version tracking
