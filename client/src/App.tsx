@@ -1,7 +1,7 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Route, Switch, Router as WouterRouter } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Navigation from "./components/Navigation";
@@ -12,8 +12,9 @@ import Squad from "./pages/Squad";
 import Trophies from "./pages/Trophies";
 import Contact from "./pages/Contact";
 
-function Router() {
+function AppRouter() {
   return (
+    <WouterRouter base="/juventus-fc-website-phase2-final">
     <div className="flex flex-col min-h-screen">
       <Navigation />
       <main className="flex-1">
@@ -30,6 +31,7 @@ function Router() {
       </main>
       <Footer />
     </div>
+    </WouterRouter>
   );
 }
 
@@ -47,7 +49,7 @@ function App() {
       >
         <TooltipProvider>
           <Toaster />
-          <Router />
+          <AppRouter />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
