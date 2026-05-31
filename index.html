@@ -10,8 +10,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <script type="module" crossorigin src="/juventus-fc-website-phase2-final/assets/index-C3MBR-Ry.js"></script>
-    <link rel="stylesheet" crossorigin href="/juventus-fc-website-phase2-final/assets/index-8y6f3Ozn.css">
+    <script>
+      (function() {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/juventus-fc-website-phase2-final/assets/index-Bocgh4PO.js"></script>
+    <link rel="stylesheet" crossorigin href="/juventus-fc-website-phase2-final/assets/index-Xs4GuPI5.css">
   </head>
 
   <body>
